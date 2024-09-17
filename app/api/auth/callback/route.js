@@ -3,9 +3,9 @@ import { getIronSession } from "iron-session";
 import { cookies } from "next/headers";
 import { sessionOptions } from "../../../lib";
 
-const host = process.env.NEXT_PUBLIC_VERCEL_URL.startsWith("localhost")
-  ? "http://" + process.env.NEXT_PUBLIC_VERCEL_URL + ":" + process.env.PORT
-  : `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
+const host = process.env.VERCEL_PROJECT_PRODUCTION_URL.startsWith("localhost")
+  ? `http://${process.env.VERCEL_PROJECT_PRODUCTION_URL}:${process.env.PORT}`
+  : `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
 
 async function handler(req) {
   const { searchParams } = new URL(req.url);
