@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getIronSession } from "iron-session";
 import { cookies } from "next/headers";
-import { sessionOptions } from "@/app/lib";
+import { sessionOptions } from "../../../lib";
 
 const host = process.env.VERCEL_URL.startsWith("localhost")
   ? "http://" + process.env.VERCEL_URL + ":" + process.env.PORT

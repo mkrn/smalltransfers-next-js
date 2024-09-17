@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import PayButton from "@/app/components/PayButton";
-import { getSession } from "@/app/actions";
+import PayButton from "./PayButton";
+import { getSession } from "../actions";
 
 const Dashboard = () => {
   const [session, setSession] = useState(null);

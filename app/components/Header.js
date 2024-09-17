@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { getSession, logout } from "@/app/actions";
+import { getSession, logout } from "../actions";
 import { useEffect, useState } from "react";
 
 export const SignInButton = () => {

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { pay } from "@/app/actions";
+import { pay } from "../actions";
 
 const PayButton = ({ amountMicros }) => {
   const [isPaid, setIsPaid] = useState(false);
