@@ -3,9 +3,9 @@ import { getIronSession } from "iron-session";
 import { cookies } from "next/headers";
 import { sessionOptions } from "../../../lib";
 
-const host = process.env.VERCEL_URL.startsWith("localhost")
-  ? "http://" + process.env.VERCEL_URL + ":" + process.env.PORT
-  : `https://${process.env.VERCEL_URL}`;
+const host = process.env.NEXT_PUBLIC_VERCEL_URL.startsWith("localhost")
+  ? "http://" + process.env.NEXT_PUBLIC_VERCEL_URL + ":" + process.env.PORT
+  : `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
 
 async function handler(req) {
   const { searchParams } = new URL(req.url);
@@ -14,6 +14,10 @@ async function handler(req) {
   const session = await getIronSession(cookies(), sessionOptions);
 
   if (authorizationCode) {
+    console.log(host);
+
+    console.log(process.env); // debug
+
     try {
       const response = await fetch(
         "https://smalltransfers.com/api/v1/oauth/tokens",

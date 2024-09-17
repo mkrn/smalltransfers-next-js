@@ -23,7 +23,7 @@ create a file called `.env.local` with the following:
 ```bash
 SMALLTRANSFERS_SECRET_KEY=sk_test_.....
 NEXT_PUBLIC_SMALLTRANSFERS_PUBLISHABLE_KEY=pk_test_.....
-VERCEL_URL=localhost
+NEXT_PUBLIC_VERCEL_URL=localhost
 SMALLTRANSFERS_PASSWORD=complex_password_at_least_32_characters_long
 ```
 
